@@ -17,9 +17,9 @@ module Youth::EventDecorator
   private
 
   def icon
-    if model.is_a? Event::Course
+    if model.type.to_s == 'Event::Course'
       :book
-    elsif model.is_a? Event::Camp
+    elsif model.type.to_s == 'Event::Camp'
       :campground
     else
       :'calendar-alt'
